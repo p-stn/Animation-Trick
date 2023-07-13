@@ -1,0 +1,303 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.Trick {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Trick1 {
+  width: 100%;
+  height: 300px;
+  background-color: #69658d;
+  background-image: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Trick1 .t1 {
+  width: 200px;
+  height: 200px;
+  background-image: linear-gradient(#0f0c29, #302b63, #24243e);
+  transition: 2.5s;
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.9);
+}
+.Trick1 .t1:hover {
+  transform: rotate(260deg);
+  border-radius: 50%;
+  scale: 0.3;
+}
+
+.Trick2 {
+  width: 100%;
+  height: 300px;
+  background-color: #4d43a9;
+  background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Trick2 .t2 {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  background-color: rgba(10, 10, 250, 0.5);
+  transform-style: preserve-3d;
+  animation: rotateY 15s linear infinite;
+}
+.Trick2 .t2 > div {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  background-color: rgba(250, 10, 10, 0.5);
+  transform: translateZ(0px) rotateX(30deg);
+  animation: rotateX 15s linear infinite;
+}
+@keyframes rotateY {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+@keyframes rotateX {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+
+.Trick3 {
+  width: 100%;
+  height: 300px;
+  background-color: #5a806f;
+  background-image: linear-gradient(to right, #000428, #004e92);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.Trick3 .contaner {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.Trick3 .p {
+  position: absolute;
+  background-color: transparent;
+  width: calc(var(--i) * 2.5vmin);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 0.119px solid rgb(94, 255, 0);
+  transform-style: preserve-3d;
+  transform: rotateX(70deg) translateZ(50px);
+  animation: my-move 4s ease-in-out calc(var(--i) * 0.08s) infinite;
+  box-shadow: 8px 8px 15px rgb(124, 124, 124), inset 6px 8px 15px rgb(124, 124, 124);
+}
+@keyframes my-move {
+  0%, 100% {
+    transform: rotateX(70deg) translateZ(50px) translateY(0px);
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    transform: rotateX(70deg) translateZ(50px) translateY(-50vmin);
+    filter: hue-rotate(180deg);
+  }
+}
+
+.Trick4 {
+  width: 100%;
+  height: 300px;
+  background-color: #7d9f0e;
+  background-image: linear-gradient(#485563, #29323c);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.Trick4 .frame {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  background-color: #3f6aaf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Trick4 .center {
+  cursor: pointer;
+}
+.Trick4 .li {
+  background: #fff;
+  width: 100px;
+  height: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+.Trick4 #ln1 {
+  animation: animationLinha1 2s infinite;
+}
+.Trick4 #ln2 {
+  animation: animationLinha2 2s infinite;
+}
+.Trick4 #ln3 {
+  animation: animationLinha3 2s infinite;
+}
+@keyframes animationLinha1 {
+  50% {
+    transform: translateY(25px);
+  }
+  100% {
+    transform: rotate(-60deg);
+  }
+}
+@keyframes animationLinha2 {
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+@keyframes animationLinha3 {
+  50% {
+    transform: translateY(-25px);
+  }
+  100% {
+    transform: rotate(120deg);
+  }
+}
+
+.Trick5 {
+  width: 100%;
+  height: 300px;
+  background-color: #0e9f78;
+  background-image: linear-gradient(#16222a, #3a6073);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.Trick5 .container {
+  transform-style: preserve-3d;
+  height: 400px;
+  width: 400px;
+  position: relative;
+  animation: rotate 12s infinite linear;
+}
+@keyframes rotate {
+  from {
+    transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+  }
+  to {
+    transform: rotateY(360deg) rotateX(360deg) rotateZ(0deg);
+  }
+}
+.Trick5 .triangel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 86.6px;
+  width: 100px;
+  clip-path: polygon(50% 0, 0% 100%, 5% 95%, 50% 5%, 97% 97%, 3% 97%, 0 100%, 100% 100%);
+}
+.Trick5 .triangel:nth-child(1) {
+  transform: rotateY(72deg) translateZ(34px) rotateX(53deg);
+  background-color: hsla(18, 75%, 75%, 0.8);
+}
+.Trick5 .triangel:nth-child(2) {
+  transform: rotateY(144deg) translateZ(34px) rotateX(53deg);
+  background-color: hsla(36, 75%, 75%, 0.8);
+}
+.Trick5 .triangel:nth-child(3) {
+  transform: rotateY(216deg) translateZ(34px) rotateX(53deg);
+  background-color: hsla(54, 75%, 75%, 0.8);
+}
+.Trick5 .triangel:nth-child(4) {
+  transform: rotateY(288deg) translateZ(34px) rotateX(53deg);
+  background-color: hsla(72, 75%, 75%, 0.8);
+}
+.Trick5 .triangel:nth-child(5) {
+  transform: rotateY(360deg) translateZ(34px) rotateX(53deg);
+  background-color: hsla(90, 75%, 75%, 0.8);
+}
+.Trick5 .triangel:nth-child(6) {
+  transform: translateY(68.5px) rotateZ(180deg) rotateY(432deg) translateZ(76.5px) rotateX(-11deg);
+  background-color: hsla(108, 75%, 75%, 0.8);
+}
+.Trick5 .triangel:nth-child(7) {
+  transform: translateY(68.5px) rotateZ(180deg) rotateY(504deg) translateZ(76.5px) rotateX(-11deg);
+  background-color: hsla(126, 75%, 75%, 0.8);
+}
+.Trick5 .triangel:nth-child(8) {
+  transform: translateY(68.5px) rotateZ(180deg) rotateY(576deg) translateZ(76.5px) rotateX(-11deg);
+  background-color: hsla(144, 75%, 75%, 0.8);
+}
+.Trick5 .triangel:nth-child(9) {
+  transform: translateY(68.5px) rotateZ(180deg) rotateY(648deg) translateZ(76.5px) rotateX(-11deg);
+  background-color: hsla(162, 75%, 75%, 0.8);
+}
+.Trick5 .triangel:nth-child(10) {
+  transform: translateY(68.5px) rotateZ(180deg) rotateY(720deg) translateZ(76.5px) rotateX(-11deg);
+  background-color: hsla(180, 75%, 75%, 0.8);
+}
+.Trick5 .triangel:nth-child(11) {
+  transform: translateY(68.5px) rotateY(828deg) translateZ(76.5px) rotateX(-11deg);
+  background-color: hsla(198, 75%, 75%, 0.8);
+}
+.Trick5 .triangel:nth-child(12) {
+  transform: translateY(68.5px) rotateY(900deg) translateZ(76.5px) rotateX(-11deg);
+  background-color: hsla(216, 75%, 75%, 0.8);
+}
+.Trick5 .triangel:nth-child(13) {
+  transform: translateY(68.5px) rotateY(972deg) translateZ(76.5px) rotateX(-11deg);
+  background-color: hsla(234, 75%, 75%, 0.8);
+}
+.Trick5 .triangel:nth-child(14) {
+  transform: translateY(68.5px) rotateY(1044deg) translateZ(76.5px) rotateX(-11deg);
+  background-color: hsla(252, 75%, 75%, 0.8);
+}
+.Trick5 .triangel:nth-child(15) {
+  transform: translateY(68.5px) rotateY(1116deg) translateZ(76.5px) rotateX(-11deg);
+  background-color: hsla(270, 75%, 75%, 0.8);
+}
+.Trick5 .triangel:nth-child(16) {
+  transform: translateY(137.5px) rotateZ(180deg) rotateY(1188deg) translateZ(34px) rotateX(52deg);
+  background-color: hsla(288, 75%, 75%, 0.8);
+}
+.Trick5 .triangel:nth-child(17) {
+  transform: translateY(137.5px) rotateZ(180deg) rotateY(1260deg) translateZ(34px) rotateX(52deg);
+  background-color: hsla(306, 75%, 75%, 0.8);
+}
+.Trick5 .triangel:nth-child(18) {
+  transform: translateY(137.5px) rotateZ(180deg) rotateY(1332deg) translateZ(34px) rotateX(52deg);
+  background-color: hsla(324, 75%, 75%, 0.8);
+}
+.Trick5 .triangel:nth-child(19) {
+  transform: translateY(137.5px) rotateZ(180deg) rotateY(1404deg) translateZ(34px) rotateX(52deg);
+  background-color: hsla(342, 75%, 75%, 0.8);
+}
+.Trick5 .triangel:nth-child(20) {
+  transform: translateY(137.5px) rotateZ(180deg) rotateY(1476deg) translateZ(34px) rotateX(52deg);
+  background-color: hsla(0, 75%, 75%, 0.8);
+}
+
+/*# sourceMappingURL=master.css.map */
