@@ -2,7 +2,8 @@
 
 ## [Demo Project](https://p-stn.github.io/Animation-Trick/)
 
-![photo-trick](https://github.com/p-stn/Animation-Trick/assets/63667741/bf727977-2275-4561-a4da-7c05b3609d77)
+![photo-trickT](https://github.com/p-stn/Animation-Trick/assets/63667741/0e1a1673-3cd2-4c28-a6e5-746cefda0e25)
+
 
 
 - Developed by Pooya Saadatian 🤙
